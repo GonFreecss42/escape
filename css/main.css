@@ -1,0 +1,492 @@
+@import url(reset.css);
+@import url(font.css);
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  font-family: "Oxygen";
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+.header {
+  height: 74px;
+  display: flex;
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 940px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.header__logo__link {
+  font-family: "Lora";
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu__list {
+  display: flex;
+}
+
+.header__menu__item {
+  margin-left: 40px;
+}
+
+.header__menu__link {
+  font-family: "Oxygen";
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero {
+  height: 500px;
+  background: url(../images/welcome_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__title {
+  color: white;
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero__subtitle {
+  color: white;
+  opacity: 0.63;
+  font-weight: 100;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.hero__link {
+  font-size: 13px;
+  height: 44px;
+  width: 167px;
+  background-color: #dd783f;
+  transition: background-color 0.4s linear;
+  display: inline-block;
+  text-transform: capitalize;
+  text-decoration: none;
+  line-height: 44px;
+  color: white;
+}
+
+.hero__link:hover {
+  background-color: rgb(165, 44, 22);
+}
+
+.categories {
+  height: 65px;
+  background-color: white;
+}
+
+.categories__list {
+  align-items: center;
+  column-gap: 100px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  list-style: none;
+}
+
+.categories__link {
+  font-size: 14px;
+  color: #768088;
+  text-decoration: none;
+}
+
+.posts {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+  margin-bottom: 60px;
+  padding-top: 60px;
+}
+
+.posts__title {
+  color: #2e2e2e;
+  font-family: "Oxygen";
+  font-size: 20px;
+  margin-bottom: 22px;
+  position: relative;
+  text-align: center;
+}
+
+.posts__title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 190px;
+  background-color: #dedede;
+  margin-inline: auto;
+  margin-top: 16px;
+}
+
+.posts__content {
+  display: flex;
+  column-gap: 20px;
+}
+
+.posts__item {
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+}
+
+.posts__item__layout {
+  bottom: 20px;
+  left: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+.posts__item__title {
+  color: white;
+  font-family: "Lora";
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.posts__item__description {
+  color: rgb(255, 255, 255, 0.7);
+  font-family: "Oxygen";
+  font-size: 14px;
+}
+
+.posts__item__label {
+  top: 20px;
+  left: 20px;
+  height: 26px;
+  font-size: 12px;
+  position: absolute;
+  color: white;
+  background-color: #dd783f;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 26px;
+  font-family: "Oxygen";
+  font-style: normal;
+  border-radius: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.articles {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+  margin-bottom: 110px;
+}
+
+.articles__title {
+  color: #2e2e2e;
+  font-family: "Oxygen";
+  font-size: 20px;
+  margin-bottom: 22px;
+  position: relative;
+  text-align: center;
+}
+
+.articles__title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 190px;
+  background-color: #dedede;
+  margin-inline: auto;
+  margin-top: 16px;
+}
+
+.articles__content {
+  display: flex;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.articles__item {
+  overflow: hidden;
+  position: relative;
+  width: calc(33.333% - 20px);
+  margin-bottom: 20px;
+}
+
+.articles__item__layout {
+  background-color: white;
+  padding: 14px;
+}
+
+.articles__item__title {
+  font-family: "Lora";
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #101315;
+}
+
+.articles__item__description {
+  font-size: 13px;
+  font-family: "Oxygen";
+  color: #7a7a7a;
+  line-height: 19px;
+  min-height: 38px;
+}
+
+.subscribe {
+  height: 470px;
+  background-image: url(../images/subscribe_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  padding-bottom: 90px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.subscribe__title {
+  font-family: "Oxygen";
+  font-size: 25px;
+  color: #efefef;
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.subscribe__title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 190px;
+  background-color: #dedede;
+  margin-inline: auto;
+  margin-top: 16px;
+}
+
+.subscribe__input {
+  height: 50px;
+  width: 375px;
+  color: #817f83;
+  padding: 0 35px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.subscribe__button {
+  height: 50px;
+  width: 125px;
+  background: rgba(255, 255, 255, 0.28);
+  color: #f8f8f8;
+  display: block;
+  border-radius: 0px 3px 3px 0px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.subscribe__form {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+  height: 90px;
+  margin-top: -90px;
+  background-color: rgb(35, 47, 56, 0.6);
+  position: relative;
+  z-index: 2;
+}
+
+.footer__layout {
+  height: 90px;
+  max-width: 940px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.footer__logo__link {
+  font-family: "Lora";
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer__menu__list {
+  display: flex;
+}
+
+.footer__menu__item {
+  margin-left: 40px;
+}
+
+.footer__menu__link {
+  font-family: "Oxygen";
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ========================================== */
+/* ================ TABLET ================== */
+/* ========================================== */
+
+@media (max-width: 1023px) {
+
+  .header,
+  .posts,
+  .articles,
+  .footer {
+    padding-inline: 10px;
+  }
+
+  .categories__list {
+    column-gap: 50px;
+  }
+}
+
+/* ========================================== */
+/* ================= MOBILE ================= */
+/* ========================================== */
+@media (max-width: 767px) {
+
+  .header,
+  .footer {
+    position: static;
+    height: auto;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .header__logo {
+    margin-bottom: 20px;
+  }
+
+  .header__logo__link {
+    color: #2e2e2e;
+  }
+
+  .header__menu,
+  .footer__menu {
+    margin-bottom: 20px;
+  }
+
+  .header__menu__list,
+  .footer__menu__list {
+    column-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header__menu__item,
+  .footer__menu__item {
+    margin-left: 0;
+  }
+
+  .header__menu__link,
+  .footer__menu__link {
+    color: #2e2e2e;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .hero__text {
+    font-size: 24px;
+  }
+
+  .categories__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .posts__content {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .posts {
+    margin-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .posts__item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .articles {
+    margin-bottom: 40px;
+  }
+
+  .articles__content {
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .articles__item {
+    width: 100%;
+  }
+
+  .articles__item__image, .posts__item__image {
+    width: 100%;
+    
+  }
+
+  .subscribe__input {
+    width: auto;
+  }
+
+  .footer {
+    margin-top: 0;
+    background: rgb(122, 108, 108)
+  }
+
+  .footer__layout {
+    flex-direction: column;
+  }
+
+  .footer__menu__link {
+    color: white;
+  }
+
+  .subscribe {
+    height: 300px;
+    padding-bottom: 0;
+  }
+}
